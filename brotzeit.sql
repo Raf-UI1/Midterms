@@ -21,16 +21,29 @@ CREATE TABLE Store (
   PRIMARY KEY (StoreID)
 );
 
+-- diaz
 CREATE TABLE OrderType ( 
-
+  OrderTypeID INTEGER,
+  OrderTypeName VARCHAR(50),
+  PRIMARY KEY (OrderTypeID)
 );
 
+-- diaz
 CREATE TABLE Category (
-
+  CategoryID INTEGER,
+  CategoryName VARCHAR(50),
+  PRIMARY KEY (CategoryID)
 );
 
+-- diaz
 CREATE TABLE AddressBook (
-
+  AddressID INTEGER,
+  CustomerID INTEGER,
+  AddressLabel VARCHAR(100),
+  AddressLine VARCHAR(50),
+  PostalCode VARCHAR(20),
+  PRIMARY KEY (AddressID), 
+  FOREIGN KEY (CustomerID) REFERENCES Customer(CustomerID)
 );
 
 --bayquen
